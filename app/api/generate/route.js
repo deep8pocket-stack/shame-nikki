@@ -21,6 +21,10 @@ export async function POST(request) {
 - テンションは高すぎず自然
 - 少しだらけた感じもOK
 - 絵文字を少し使う（使いすぎない）
+- 方言は軽く入れる（自然な範囲で）
+- 出身地に応じた話し方にする（例：松山なら軽い伊予弁）
+- メモの内容は写真の内容として自然に文章に反映させる
+- 写真を見ているような描写を少し入れる
 - 出力は必ずJSON形式
 
 NG:
@@ -34,6 +38,7 @@ NG:
 - テンション: ${body.tension}
 - キャラ: ${body.character}
 - 文量: ${body.length}
+
 - 予約導線: ${body.includeReservationCTA ? '入れる' : '入れない'}
 - メモ: ${body.memo || 'なし'}
 
