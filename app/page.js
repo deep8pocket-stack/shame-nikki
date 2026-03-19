@@ -156,14 +156,36 @@ export default function HomePage() {
             </div>
 
             <div className="field">
-              <label>メモ（任意）</label>
-              <textarea
-                className="textarea"
-                placeholder="例：19時以降空いてます、やさしい人に会いたい、今日はピンクの下着です など"
-                value={form.memo}
-                onChange={(e) => update('memo', e.target.value)}
-              />
-            </div>
+  <label>メモ（任意）</label>
+  <textarea
+    className="textarea"
+    value={form.memo}
+    onChange={(e) => update('memo', e.target.value)}
+    placeholder="例：19時以降空いてます、やさしい人に会いたい、今日はピンクの下着です など"
+  />
+</div>
+<div className="field">
+  <label>写真</label>
+  <textarea
+    className="textarea"
+    value={form.photo}
+    onChange={(e) => update('photo', e.target.value)}
+    placeholder={`【写真】
+例：黒の下着で鏡越し`}
+  />
+</div>
+
+<div className="field">
+  <label>シチュ</label>
+  <textarea
+    className="textarea"
+    value={form.situation}
+    onChange={(e) => update('situation', e.target.value)}
+    placeholder={`【シチュ】
+例：20時から出勤しててちょっと寂しい気分`}
+  />
+</div>
+
 
             <div className="actions">
               <button className="btn btnPrimary" onClick={generate} disabled={loading}>
