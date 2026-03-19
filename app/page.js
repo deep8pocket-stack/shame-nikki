@@ -11,6 +11,7 @@ const initialForm = {
   length: '短め',
   includeReservationCTA: true,
   memo: '',
+area: '松山',
 };
 
 export default function HomePage() {
@@ -88,6 +89,16 @@ export default function HomePage() {
                   <option>しっとり落ち着いて</option>
                 </select>
               </div>
+    <div className="field">
+  <label>出身地</label>
+  <select className="select" value={form.area} onChange={(e) => update('area', e.target.value)}>
+    <option>標準語</option>
+    <option>松山</option>
+    <option>関西</option>
+    <option>博多</option>
+    <option>広島</option>
+  </select>
+</div>
               <div className="field">
                 <label>客層</label>
                 <select className="select" value={form.audience} onChange={(e) => update('audience', e.target.value)}>
